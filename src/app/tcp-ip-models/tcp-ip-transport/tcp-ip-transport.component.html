@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tcp-ip-transport</title>
+</head>
+<body>
+    <div class="tcp-ip-app-cont">
+        <h1>Transport Layer</h1>
+        <i>(TCP/IP Model)</i>
+    </div>
+    <p>The Transport Layer is responsible for the end-to-end delivery of data between hosts or devices over a network. It ensures reliable and efficient data transmission by providing services such as segmentation, error checking, flow control, and congestion control.</p>
+    <p>Key Points about the Transport Layer:</p>
+
+    <ul>
+        <li>The Transport Layer receives data from the upper layers and breaks it into smaller segments for transmission across the network. It also reassembles the received segments into complete data units.</li>
+        <li>Two commonly used protocols at the Transport Layer are TCP and UDP.</li>
+        <li>TCP provides reliable and connection-oriented communication. It ensures that data is delivered without errors, in the correct order, and with congestion control. It guarantees the reliability of data transmission by using acknowledgments, retransmissions, and sequencing of packets.</li>
+        <li>UDP, on the other hand, provides unreliable and connectionless communication. It does not guarantee the delivery or ordering of data packets. It is often used for real-time applications, such as streaming media or online gaming, where timely delivery is more important than reliability.</li>
+    </ul><br>
+
+    <ul>
+        <b>TCP (Transmission Control Protocol):</b>
+        <li>TCP is widely used for applications that require reliable and ordered delivery of data.</li>
+        <li>It establishes a connection between the sender and receiver before data transmission and ensures that all data packets are received correctly.</li>
+        <li>TCP provides error detection and correction mechanisms through checksums and acknowledgments.</li>
+        <li>It implements flow control mechanisms to regulate the rate of data transmission and avoid overwhelming the receiver.</li>
+    </ul><br>
+
+    <ul>
+        <b>UDP (User Datagram Protocol):</b>
+        <li>UDP is a lightweight and connectionless protocol.</li>
+        <li>It does not establish a connection before transmitting data, making it faster but less reliable than TCP.</li>
+        <li>UDP is often used for applications that require low latency and real-time communication, such as VoIP (Voice over IP) and DNS (Domain Name System).</li>
+        <li>It does not implement flow control or error recovery mechanisms, so data may be lost or arrive out of order.</li>
+    </ul>
+    <p>The Transport Layer is essential for ensuring reliable and efficient data transmission between network hosts. TCP provides reliable and ordered delivery of data, while UDP offers faster but less reliable communication. The choice between TCP and UDP depends on the specific requirements of the application in terms of reliability, latency, and data integrity.</p>
+
+    <div class="attack-protect-cont">
+        <div class="attack-cont">
+            <ol>
+                <h3>Attacks</h3>
+                <li>Denial of Service (DoS) Attacks: Attackers can target the transport layer with various DoS attacks, such as SYN flood attacks, which overwhelm the network with a high volume of connection requests, leading to service disruption or unavailability.</li>
+                <li>Man-in-the-Middle (MitM) Attacks: Attackers can intercept and manipulate communication between two parties by positioning themselves between the sender and receiver. This allows them to eavesdrop on the communication, modify data, or inject malicious content.</li>
+                <li>TCP/IP Hijacking: Attackers can hijack TCP/IP sessions by spoofing or impersonating legitimate endpoints. This can lead to unauthorized access, data tampering, or session manipulation.</li>
+                <li>Port Scanning and Enumeration: Attackers scan for open ports on target systems to identify potential vulnerabilities or services that can be exploited. Port scanning can be used for reconnaissance purposes before launching more targeted attacks.</li>
+            </ol>
+        </div>
+        <div class="protect-cont">
+            <ol>
+                <h3>Protects</h3>
+                <li>Encryption: Implementing encryption protocols, such as Transport Layer Security (TLS) or Secure Sockets Layer (SSL), ensures the confidentiality and integrity of data transmitted over the transport layer. Encryption protects against eavesdropping, tampering, and data interception.</li>
+                <li>Secure Socket Layer (SSL) Certificates: Using SSL certificates helps verify the identity of communication endpoints and establishes secure connections. SSL certificates are commonly used in HTTPS to secure web communication.</li>
+                <li>Firewall Protection: Firewalls can be configured to filter and monitor incoming and outgoing traffic based on defined security policies. This helps prevent unauthorized access and blocks malicious traffic targeting specific transport layer protocols or ports.</li>
+                <li>Intrusion Detection and Prevention Systems (IDPS): Deploying IDPS tools at the transport layer helps detect and prevent attacks targeting the transport protocols. These systems monitor network traffic, analyze packet-level data, and apply security rules to identify and block suspicious activities.</li>
+                <li>Network Segmentation: Segmenting networks into separate subnets or VLANs helps isolate and contain potential attacks. By separating sensitive systems or services from the rest of the network, the impact of a successful attack can be minimized.</li>
+                <li>Quality of Service (QoS) Mechanisms: Implementing QoS mechanisms allows for prioritization and allocation of network resources based on traffic characteristics. This helps ensure reliable and efficient transport of critical data, mitigating the impact of DoS attacks or network congestion.</li>
+                <li>Regular Patching and Updates: Keeping transport layer protocols, such as TCP and UDP, up to date with the latest patches and updates helps mitigate known vulnerabilities and security weaknesses.</li>
+            </ol>
+        </div>
+    </div>
+    <p>By implementing these protection measures, organizations can enhance the security and reliability of the transport layer, ensuring secure and efficient communication between network hosts.</p>
+
+</body>
+</html>

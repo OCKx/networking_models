@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osi-data-link</title>
+</head>
+<body>
+    <div class="tcp-ip-app-cont">
+        <h1>Data Link Layer</h1>
+        <i>(OSI Model)</i>
+    </div>
+
+    <p>The Data Link Layer, located at the second layer of the OSI model, is responsible for the reliable and error-free transmission of data frames between adjacent nodes over a physical link. It provides the necessary mechanisms to establish, maintain, and terminate a link between two connected devices.</p>
+    <p>Key aspects of the Data Link Layer include:</p>
+    <ul>
+        <li>Frame Delimitation: The Data Link Layer divides the stream of data received from the Network Layer into manageable frames. Each frame consists of a header, data payload, and trailer, with specific bit patterns used for delimiting the frames. This allows the receiving node to properly identify and extract the frames from the incoming bit stream.</li>
+        <li>Physical Addressing: The Data Link Layer assigns unique physical addresses, often referred to as MAC (Media Access Control) addresses, to network interface cards (NICs) or Ethernet devices. These addresses are used to identify devices within a local network and enable the delivery of frames to the intended recipients on the same network segment.</li>
+        <li>Error Detection and Correction: The Data Link Layer includes mechanisms for error detection and correction to ensure reliable data transmission. Common techniques involve the use of frame checksums or CRC (Cyclic Redundancy Check) codes. These mechanisms allow the receiving node to detect and potentially correct errors that may have occurred during transmission.</li>
+        <li>Flow Control: Flow control mechanisms regulate the flow of data between the sender and receiver to avoid overwhelming the receiving device. Techniques such as sliding window protocols or buffer management help manage the rate of data transmission and prevent data loss or congestion.</li>
+        <li>Media Access Control: The Data Link Layer governs the access to the physical media shared by multiple devices in a network. It manages the contention and arbitration among devices to prevent data collisions. Various protocols, such as Ethernet with its CSMA/CD (Carrier Sense Multiple Access with Collision Detection), control the media access and ensure efficient data transmission.</li>
+    </ul>
+    <p>The Data Link Layer ensures reliable point-to-point or point-to-multipoint data transfer over a physical link. By handling framing, addressing, error detection, flow control, and media access, it establishes a reliable communication channel between neighboring devices. It acts as a bridge between the Network Layer above and the Physical Layer below, enabling the transmission of data frames across the network.</p>
+
+    <div class="attack-protect-cont">
+        <div class="attack-cont">
+            <ol>
+                <h3>Attacks</h3>
+                <li>ARP Spoofing: Address Resolution Protocol (ARP) spoofing involves manipulating the ARP table on a network to associate an attacker's MAC address with the IP address of another device. This can lead to traffic interception, unauthorized access, or Denial of Service (DoS) attacks.</li>
+                <li>MAC Flooding: MAC flooding is an attack where an attacker floods the switch's MAC address table with fake MAC addresses, causing the switch to enter a fail-open mode and forward all traffic to all ports. This can result in traffic sniffing, DoS attacks, or unauthorized access.</li>
+            </ol>
+        </div>
+        <div class="protect-cont">
+            <ol>
+                <h3>Protects</h3>
+                <li>MAC Address Filtering: Implement MAC address filtering at the switch level to allow only authorized devices to communicate on the network. This helps prevent unauthorized devices from gaining access and protects against MAC spoofing attacks.</li>
+                <li>VLAN Segmentation: Use Virtual LANs (VLANs) to logically segment the network. This isolates traffic and improves network security by separating different groups of devices, reducing the attack surface and limiting the impact of potential breaches.</li>
+                <li>Port Security: Enable port security features on switches to limit the number of MAC addresses allowed on a port. This prevents MAC flooding attacks by restricting the number of MAC addresses that can communicate through a specific switch port.</li>
+                <li>ARP Spoofing Detection: Implement mechanisms to detect and prevent ARP spoofing attacks, such as ARP inspection or dynamic ARP inspection. These techniques validate ARP packets and ensure that the IP-to-MAC address mapping is correct.</li>
+                <li>Link Encryption: Use encryption protocols, such as IPsec (Internet Protocol Security), to protect data confidentiality and integrity over the data link. This adds an additional layer of security, especially when transmitting sensitive information over untrusted networks.</li>
+            </ol>
+        </div>
+    </div>
+
+    <p>By implementing these protection measures, network administrators can enhance the security of the Data Link Layer and safeguard data transmission between connected nodes.</p>
+</body>
+</html>

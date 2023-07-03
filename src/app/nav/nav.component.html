@@ -1,0 +1,24 @@
+
+<nav [class.navDisplay]="showNav"><!-- *ngIf="showNav" -->
+    <div class="list-cont">
+        <a routerLink="/osi-models" (click)="showOSIModels()"><b>OSI Models</b></a>
+        <ul class="list-sub-osi" [class.showOSI]="displayOSIModels">
+            <a routerLink="/osi-application"><li>Application</li></a>
+            <a routerLink="/osi-presentation"><li>Presentation</li></a>
+            <a routerLink="/osi-session"><li>Session</li></a>
+            <a routerLink="/osi-transport"><li>Transport</li></a>
+            <a routerLink="/osi-network"><li>Network</li></a>
+            <a routerLink="/osi-data-link"><li>Data Link</li></a>
+            <a routerLink="/osi-physical"><li>Physical</li></a>
+        </ul>
+    </div>
+    <div class="list-cont">
+        <a routerLink="/tcp-ip-models" (click)="showTCPModels()"><b>TCP/IP Models</b></a>
+        <ul class="list-sub-tcp-ip" [class.showTCPIP]="displayTCPModels">
+            <a routerLink="/tcp-ip-application"><li>Application</li></a>
+            <a routerLink="/tcp-ip-transport"><li>Transport</li></a>
+            <a routerLink="/tcp-ip-internet"><li>Internet</li></a>
+            <a routerLink="/tcp-ip-network-interface"><li>Network Access</li></a>
+        </ul>
+    </div>
+</nav>

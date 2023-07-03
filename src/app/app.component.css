@@ -1,0 +1,9 @@
+.right-section{
+    margin: 200px 5% 0 25%;
+}
+
+@media screen and (max-width: 850px) {
+    .right-section{
+        margin: 200px 20px 0 20px;
+    }
+}

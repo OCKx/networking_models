@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tcp/ip model</title>
+</head>
+<body>
+    <app-header></app-header>
+
+    <section>
+        <div class="network-model-cont">
+            <div class="text">
+                <h1>TCP/IP MODEL</h1>
+                <p>
+                    The TCP/IP (Transmission Control Protocol/Internet Protocol) model is a network model that provides the foundation for communication over the internet. Here are some key points to note about the TCP/IP model:
+                </p>
+                <ol>
+                    <li>Four Layers: The TCP/IP model consists of four layers, which are:</li>
+                    <ul>
+                        <li>Network Interface Layer (also known as the Network Access Layer)</li>
+                        <li>Internet Layer</li>
+                        <li>Transportation Layer</li>
+                        <li>Application Layer</li>
+                    </ul>
+                </ol>
+                <div class="img-cont">
+                    <img src="assets/images/tcp-ip.png" width="80%" alt="">
+                </div>
+                <ol start="2">
+                    <li>Simplified Model: The TCP/IP model is a simplified version of the OSI (Open Systems Interconnection) model, which has seven layers. The TCP/IP model combines and condenses some of the functionalities of the OSI model's lower layers.</li>
+                    <li>Network Interface Layer: This layer deals with the physical transmission of data over the network medium. It includes protocols related to the specific network technology, such as Ethernet or Wi-Fi. The Network Interface Layer handles tasks such as addressing, framing, and error detection.</li>
+                    <li>Internet Layer: The Internet Layer is responsible for routing packets across networks. It manages logical addressing, including IP (Internet Protocol) addresses. The Internet Layer handles tasks such as packet fragmentation and reassembly and implements protocols such as IP, ICMP (Internet Control Message Protocol), and IGMP (Internet Group Management Protocol).</li>
+                    <li>Transport Layer: The Transport Layer ensures reliable and efficient transportation of data between devices. It provides end-to-end communication services, managing data segmentation, flow control, and error recovery. The main protocols used in this layer are TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).</li>
+                    <li>Application Layer: The Application Layer encompasses a wide range of protocols and services for specific applications or processes. It provides interfaces and services for applications to access network resources. Some common protocols at this layer include HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol), SMTP (Simple Mail Transfer Protocol), and DNS (Domain Name System).</li>
+                    <li>The Internet Standard: The TCP/IP model is the foundation of the internet and is widely used in networking. It is an open and adaptable model that allows for the integration of new technologies and protocols as they emerge.</li>
+                </ol>
+                <p>
+                    Understanding the TCP/IP model is essential for network professionals as it provides a framework for understanding network communication, troubleshooting network issues, and designing efficient network architectures. It forms the basis for communication between devices on the internet and plays a vital role in the functioning of modern networks.
+                </p>
+            </div>
+        </div>
+        <div class="models-cont">
+            <a routerLink="/tcp-ip-application"><div class="layers-options">Application <span><i>PDU: Data (e.g., HTTP message, SMTP message, FTP data)</i></span></div></a>
+            <a routerLink="/tcp-ip-transport"><div class="layers-options">Transport <span><i>PDU: Segment (for TCP) or Datagram (for UDP)</i></span></div></a>
+            <a routerLink="/tcp-ip-internet"><div class="layers-options">Internet <span><i>PDU: Packet (e.g., IP packet)</i></span></div></a>
+            <a routerLink="/tcp-ip-network-interface"><div class="layers-options">Network Interface <span><i>PDU: Frame (e.g., Ethernet frame)</i></span></div></a>
+        </div>
+    </section>
+</body>
+</html>

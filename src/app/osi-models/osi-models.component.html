@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osi model</title>
+</head>
+<body>
+    <app-header></app-header>
+
+    <section>
+        <div class="network-model-cont">
+            <div class="text">
+                <h1>OSI MODEL</h1>
+                <p>
+                    The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a communication system or network into seven distinct layers. Here's a note highlighting key aspects of the OSI model:
+                </p>
+                <ol>
+                    <li>Layered Structure: The OSI model consists of seven layers, each responsible for specific functions in the communication process. The layers are named as follows: Physical, Data Link, Network, Transport, Session, Presentation, and Application. Each layer builds upon the services provided by the layer below it.</li>
+                    <li>Encapsulation: Data is encapsulated at each layer as it moves through the network. Each layer adds its own header (and sometimes footer) to the data, forming a protocol data unit (PDU). This process allows for modularity and enables different layers to work independently.</li>
+                    <li>Abstraction: The OSI model provides a high level of abstraction, allowing network designers and engineers to focus on specific layers without needing to understand the intricacies of other layers. Each layer provides specific services to the layer above it, shielding higher layers from the complexities of the lower layers.</li>
+                    <li>Protocol Independence: The OSI model promotes protocol independence, meaning that different protocols can be implemented at each layer as long as they adhere to the functions and interfaces defined by the model. This flexibility allows for interoperability between devices from different vendors.</li>
+                    <li>Functions of Each Layer:</li>
+                    <ul>
+                        <li>Physical Layer: Handles the physical transmission of data over the network medium, dealing with electrical and mechanical specifications.</li>
+                        <li>Data Link Layer: Provides error-free transmission over a physical link, handles framing, and controls access to the physical medium.</li>
+                        <li>Network Layer: Manages logical addressing, routing, and packet forwarding across multiple networks.</li>
+                        <li>Transport Layer: Ensures reliable, end-to-end data delivery, and provides features like segmentation, flow control, and error recovery.</li>
+                        <li>Session Layer: Establishes, maintains, and terminates sessions between applications, facilitating communication and synchronization.</li>
+                        <li>Presentation Layer: Handles data representation, encryption, and compression, ensuring that data from different systems can be understood by the receiving system.</li>
+                        <li>Application Layer: Provides interfaces and services for applications to access network resources, such as email, file transfer, and remote login.</li>
+                    </ul>
+                </ol>
+                <div class="img-cont">
+                    <img src="assets/images/osi.png" width="80%" alt="">
+                </div>
+                <ol start="6">
+                    <li>Standardization: The OSI model promotes standardization by defining the functions, services, and protocols for each layer. This standardization facilitates communication and interoperability between different network devices and technologies.</li>
+                    <li>Real-world Implementation: Although the OSI model is a conceptual framework, in practice, many network protocols and technologies do not strictly adhere to all the layers. The TCP/IP model, which is widely used on the internet, is a practical implementation of the OSI model, combining some of its layers.</li>
+                </ol>
+                <p>
+                    Understanding the OSI model is essential for network professionals as it provides a common language and framework for discussing and analyzing network architectures, troubleshooting network issues, and designing efficient and scalable network infrastructures.
+                </p>
+            </div>
+        </div>
+        <div class="models-cont">
+            <a routerLink="/osi-application"><div class="layers-options">Application <span><i>PDU: Data</i></span></div></a>
+            <a routerLink="/osi-presentation"><div class="layers-options">Presentation <span><i>PDU: Data</i></span></div></a>
+            <a routerLink="/osi-session"><div class="layers-options">Session <span><i>PDU: Data</i></span></div></a>
+            <a routerLink="/osi-transport"><div class="layers-options">Transport <span><i>PDU: Segment (for TCP) or Datagram (for UDP)</i></span></div></a>
+            <a routerLink="/osi-network"><div class="layers-options">Network <span><i>PDU: Packet</i></span></div></a>
+            <a routerLink="/osi-data-link"><div class="layers-options">Data Link <span><i>PDU: Frame</i></span></div></a>
+            <a routerLink="/osi-physical"><div class="layers-options">Physical <span><i>PDU: Bit</i></span></div></a>
+        </div>
+    </section>
+</body>
+</html>

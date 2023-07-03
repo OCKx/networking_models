@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osi-network</title>
+</head>
+<body>
+    <div class="tcp-ip-app-cont">
+        <h1>Network Layer</h1>
+        <i>(OSI Model)</i>
+    </div>
+
+    <p>The Network Layer, which resides at the third layer of the OSI model, is responsible for the logical addressing and routing of data packets across different networks. It establishes end-to-end communication paths, enabling data to traverse multiple networks to reach its destination.</p>
+    <p>Key aspects of the Network Layer include:</p>
+    <ul>
+        <li>Logical Addressing: The Network Layer assigns unique logical addresses, such as IP (Internet Protocol) addresses, to devices on a network. These addresses facilitate the identification and differentiation of devices within a network and across different networks. IP addresses consist of two parts: the network portion and the host portion, allowing routers to determine the appropriate path for forwarding packets.</li>
+        <li>Routing: Routing involves the process of selecting the best path for data packets to reach their destination. Routers, which operate at the Network Layer, analyze the destination IP address of incoming packets and make forwarding decisions based on routing tables. Routing protocols, such as OSPF (Open Shortest Path First) and BGP (Border Gateway Protocol), enable routers to exchange information and dynamically determine the most efficient routes.</li>
+        <li>Packet Encapsulation: The Network Layer encapsulates data received from the Transport Layer into packets or datagrams. Each packet contains the source and destination IP addresses, as well as additional control information needed for routing and delivery. The encapsulated packets are then handed over to the Data Link Layer for transmission over physical media.</li>
+    </ul>
+    <p>The Network Layer provides the foundation for internetworking, allowing disparate networks to communicate with each other. It handles the addressing and routing of data, ensuring that packets are correctly delivered across different networks. By leveraging logical addressing and routing mechanisms, the Network Layer enables the efficient and reliable transmission of data across complex network infrastructures.</p>
+    <p>Note: The Network Layer is also responsible for fragmentation and reassembly of packets when necessary, as well as other functions such as network congestion control and network security through features like firewalls and VPNs (Virtual Private Networks).</p>
+
+    <div class="attack-protect-cont">
+        <div class="attack-cont">
+            <ol>
+                <h3>Attacks</h3>
+                <li>IP Spoofing: IP spoofing involves manipulating the source IP address of a packet to make it appear as if it is coming from a trusted source. This can be used for impersonation, DoS attacks, or bypassing network security measures.</li>
+                <li>Denial of Service (DoS) Attacks: DoS attacks aim to overwhelm a network or its resources to disrupt its normal functioning. This can be achieved through flooding the network with excessive traffic, exploiting vulnerabilities in network protocols, or launching coordinated attacks from multiple sources.</li>
+                <li>Routing Attacks: Routing attacks involve manipulating routing tables or protocols to redirect or intercept network traffic. Examples include Routing Information Protocol (RIP) poisoning, Border Gateway Protocol (BGP) hijacking, or man-in-the-middle attacks targeting routing protocols.</li>
+            </ol>
+        </div>
+        <div class="protect-cont">
+            <ol>
+                <h3>Protects</h3>
+                <li>Firewalls: Deploying firewalls at network boundaries helps filter and control incoming and outgoing network traffic based on predefined security rules. Firewalls can block unauthorized access attempts, filter out malicious traffic, and enforce network segmentation.</li>
+                <li>Intrusion Detection and Prevention Systems (IDPS): IDPS solutions monitor network traffic for suspicious patterns or known attack signatures. They can detect and respond to network-layer attacks in real-time, providing alerts and actively blocking malicious activities.</li>
+                <li>Network Address Translation (NAT): NAT allows multiple devices on a private network to share a single public IP address. It acts as a security measure by hiding internal IP addresses from external networks, making it harder for attackers to directly target devices on the internal network.</li>
+                <li>Virtual Private Networks (VPNs): VPNs create secure encrypted tunnels over public networks, ensuring the confidentiality and integrity of network traffic. They provide a secure means for remote users to access private networks and protect data while in transit.</li>
+                <li>Packet Filtering: Implement packet filtering rules to control the flow of network traffic based on criteria such as source/destination IP addresses, protocols, or ports. Packet filtering helps block malicious traffic, enforce security policies, and prevent certain types of attacks.</li>
+                <li>Network Monitoring and Logging: Maintaining robust network monitoring and logging systems helps detect and investigate network-layer attacks. Monitoring network traffic, analyzing logs, and implementing anomaly detection mechanisms can help identify suspicious activities and potential security breaches.</li>
+            </ol>
+        </div>
+    </div>
+
+    <p>By implementing these protection measures, network administrators can enhance the security of the Network Layer, mitigate potential attacks, and ensure the reliable and secure transmission of data between networks.</p>
+</body>
+</html>

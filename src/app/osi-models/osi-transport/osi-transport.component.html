@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osi-transport</title>
+</head>
+<body>
+    <div class="tcp-ip-app-cont">
+        <h1>Transport Layer</h1>
+        <i>(OSI Model)</i>
+    </div>
+
+    <p>The Transport Layer, positioned as the fourth layer of the OSI model, is responsible for the reliable and efficient delivery of data between hosts on a network. Two prominent protocols that operate at this layer are TCP and UDP.</p>
+    <ul>
+        <li><span>TCP (Transmission Control Protocol):</span><br>TCP is a connection-oriented protocol known for its reliable and ordered data delivery. It establishes a connection between the sender and receiver before transmitting data, ensuring that all segments are received accurately and in the correct order. TCP provides mechanisms such as acknowledgment, retransmission, and error detection to guarantee the reliable delivery of data. It is commonly used for applications that require error-free transmission, such as web browsing, email, and file transfers.</li><br>
+        <li><span>UDP (User Datagram Protocol):</span><br>UDP, in contrast to TCP, is a connectionless protocol that offers faster and more lightweight communication. It does not establish a connection before transmitting data and does not provide reliable delivery or ordering of segments. Instead, UDP focuses on minimal overhead and low-latency communication. It is commonly used for real-time applications, multimedia streaming, online gaming, and situations where timely delivery is more critical than reliability.</li>
+    </ul>
+    <p>TCP and UDP provide distinct advantages and are suitable for different types of applications. TCP's reliability makes it ideal for scenarios where data integrity and ordered delivery are crucial, but it incurs additional overhead due to its connection-oriented nature. UDP, on the other hand, sacrifices reliability and ordering for reduced latency and minimal overhead, making it suitable for real-time applications that prioritize speed and responsiveness.</p>
+    <p>When developing applications or considering network protocols, understanding the characteristics and trade-offs between TCP and UDP is essential. Careful selection of the appropriate protocol can ensure optimal performance and meet the specific requirements of the application at hand.</p>
+
+    <div class="attack-protect-cont">
+        <div class="attack-cont">
+            <ol>
+                <h3>Attacks</h3>
+                <li>TCP/IP Hijacking: TCP/IP hijacking, also known as session hijacking, involves an attacker intercepting and taking control of an established TCP connection. This allows the attacker to inject, modify, or eavesdrop on the transmitted data.</li>
+                <li>UDP Flooding: UDP flooding is a type of DoS attack where the attacker overwhelms a target system by sending a large volume of UDP packets to exhaust its network or system resources. This can result in service disruptions or system unavailability.</li>
+            </ol>
+        </div>
+        <div class="protect-cont">
+            <ol>
+                <h3>Protects</h3>
+                <li>Encryption: Implementing encryption protocols such as Transport Layer Security (TLS) or Secure Sockets Layer (SSL) can protect data confidentiality and integrity during transmission. Encryption ensures that data exchanged between the sender and receiver is secure and cannot be intercepted or tampered with.</li>
+                <li>Firewalls: Utilize firewalls to filter and monitor incoming and outgoing traffic at the transport layer. Firewalls can block suspicious or unauthorized connections, restrict access to specific ports, and enforce security policies to protect against various attacks.</li>
+                <li>Intrusion Detection and Prevention Systems (IDPS): IDPS solutions can detect and prevent transport layer attacks by monitoring network traffic for abnormal patterns or known attack signatures. They can provide alerts or take proactive measures to mitigate attacks and protect the transport layer.</li>
+                <li>Traffic Analysis and Flow Control: Implement traffic analysis mechanisms to monitor network traffic patterns and detect anomalies or suspicious activities. Proper flow control mechanisms can help manage congestion and prevent performance degradation or disruptions caused by excessive traffic.</li>
+                <li>Secure Configuration: Configure transport layer protocols, such as TCP and UDP, with secure settings and recommended parameters. This includes utilizing strong encryption algorithms, enabling appropriate authentication mechanisms, and applying secure timeout values to mitigate certain types of attacks.</li>
+            </ol>
+        </div>
+    </div>
+
+    <p>By implementing these protection measures, organizations can enhance the security of the Transport Layer, ensure reliable data transmission, and mitigate the risks associated with potential attacks and vulnerabilities.</p>
+</body>
+</html>
